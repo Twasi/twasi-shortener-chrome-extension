@@ -28,6 +28,10 @@ body {
   width: 100%;
   text-align: center;
 }
+.homepage > a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 #headline-right {
   float: right;

@@ -1,0 +1,29 @@
+{
+  "name": "twasi_shortener_chrome",
+  "version": "1.0.0",
+  "description": "Official chrome extension for shortening URLs using twa.si.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"browserify dist/index.js -o dist/bundle.js\"",
+    "build": "tsc && browserify dist/index.js -o dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twasi/twasi-shortener-chrome-extension.git"
+  },
+  "author": "Twasi-Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twasi/twasi-shortener-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/twasi/twasi-shortener-chrome-extension#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.122",
+    "browserify": "^16.5.2",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "graphql.js": "^0.6.6"
+  }
+}

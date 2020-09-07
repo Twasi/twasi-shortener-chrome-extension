@@ -1,0 +1,17 @@
+{
+  "name": "twa.si URL-Shortener",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Official twa.si URL-Shortener extension.",
+  "author": "Twasi-Team",
+  "homepage_url": "https://github.com/twasi/twasi-shortener-chrome-extension",
+  "offline_enabled": false,
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "twa.si shortener",
+    "default_popup": "ui/html/popup.html"
+  }
+}

@@ -1,5 +1,5 @@
 .hide {
-    display: none;
+  display: none;
 }
 body {
   background-color: #1a2035;
@@ -19,11 +19,27 @@ body {
 .headline {
   font-size: 15px;
   font-weight: 900;
-  background: -webkit-linear-gradient(right,#56ccf2,#2f80ed);
+  background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .homepage {
   width: 100%;
   text-align: center;
+}
+
+#headline-right {
+  float: right;
+  color: lightgreen;
+  -webkit-animation: copied 1s ease-out;
+}
+
+@keyframes copied {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

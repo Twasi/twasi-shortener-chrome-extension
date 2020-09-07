@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"browserify dist/index.js -o dist/bundle.js\"",
-    "build": "tsc && browserify dist/index.js -o dist/bundle.js"
+    "build": "tsc && browserify dist/index.js -o dist/bundle.js",
+    "package": "ts-node scripts/create-package.ts"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,14 @@
   "homepage": "https://github.com/twasi/twasi-shortener-chrome-extension#readme",
   "devDependencies": {
     "@types/chrome": "0.0.122",
+    "@types/fs-extra": "^9.0.1",
     "browserify": "^16.5.2",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.0.2"
   },
   "dependencies": {
     "@types/node": "^14.6.4",
+    "fs-extra": "^9.0.1",
     "graphql.js": "^0.6.6"
   }
 }

@@ -16,7 +16,7 @@ body {
   outline: 0 none;
   padding: 5px;
 }
-.headline {
+#headline-left {
   font-size: 15px;
   font-weight: 900;
   background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
@@ -36,14 +36,10 @@ body {
 #headline-right {
   float: right;
   color: lightgreen;
-  -webkit-animation: copied 1s ease-out;
+  animation: example 1s 1s ease-out forwards;
 }
 
-@keyframes copied {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+@keyframes example {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }

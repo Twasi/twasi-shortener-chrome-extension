@@ -1,3 +1,29 @@
 .hide {
     display: none;
 }
+body {
+  background-color: #1a2035;
+  border-top: 4px solid #2f80ed;
+  padding: 10px;
+  margin: 0px;
+}
+#url {
+  font-size: 15px;
+  color: #fff;
+  background-color: #202940;
+  border: 2px solid #2f80ed;
+  border-radius: 3px;
+  outline: 0 none;
+  padding: 5px;
+}
+.headline {
+  font-size: 15px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(right,#56ccf2,#2f80ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.homepage {
+  width: 100%;
+  text-align: center;
+}

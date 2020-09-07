@@ -19,7 +19,6 @@ chrome.tabs.query({"active": true, "lastFocusedWindow": true}, async tabs => {
     const url = tabs[0].url || '';
     const elem = document.getElementById('url') as HTMLInputElement;
     const result = await GraphQL(`mutation { createPublicUrl(url: "${url}") { short, tag }}`)();
-    console.log(result);
     if (elem) elem.value = `https://twa.si/${result.createPublicUrl.short}/${result.createPublicUrl.tag}`;
     load(false);
     copy();

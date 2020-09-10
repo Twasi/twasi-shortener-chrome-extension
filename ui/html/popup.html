@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../ui/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../ui/css/spinner.css">
 </head>
 <body>
 <div id="loading">
-    ...
+    <div class="lds-dual-ring"></div>
 </div>
 <div id="url-container">
     <div class="headline">
@@ -15,11 +16,12 @@
     </div>
     <input type="text" id="url" readonly>
     <div class="homepage">
-      <a href="https://twa.si" target="_blank">
-        twa.si
-      </a>
+        <a href="https://twa.si" target="_blank">
+            twa.si
+        </a>
     </div>
 </div>
+<div id="error"></div>
 </body>
 <script src="../../dist/bundle.js"></script>
 </html>

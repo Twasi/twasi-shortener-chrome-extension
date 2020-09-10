@@ -1,45 +1,65 @@
 .hide {
-  display: none;
+    display: none;
 }
+
+#error {
+    color: red;
+}
+
 body {
-  background-color: #1a2035;
-  border-top: 4px solid #2f80ed;
-  padding: 10px;
-  margin: 0px;
+    background-color: #1a2035;
+    border-top: 4px solid #2f80ed;
+    padding: 10px;
+    margin: 0px;
 }
+
 #url {
-  font-size: 15px;
-  color: #fff;
-  background-color: #202940;
-  border: 2px solid #2f80ed;
-  border-radius: 3px;
-  outline: 0 none;
-  padding: 5px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #202940;
+    border: 2px solid #2f80ed;
+    border-radius: 3px;
+    outline: 0 none;
+    padding: 5px;
 }
+
 #headline-left {
-  font-size: 15px;
-  font-weight: 900;
-  background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 15px;
+    font-weight: 900;
+    background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .homepage {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
+
 .homepage > a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 #headline-right {
-  float: right;
-  color: lightgreen;
-  animation: example 1s 1s ease-out forwards;
+    float: right;
+    color: lightgreen;
+    animation: copied-animation 2s ease-out forwards;
 }
 
-@keyframes example {
-  from {opacity: 1;}
-  to {opacity: 0;}
+@keyframes copied-animation {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

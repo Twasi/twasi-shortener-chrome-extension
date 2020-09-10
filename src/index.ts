@@ -34,7 +34,10 @@ chrome.tabs.query({"active": true, "lastFocusedWindow": true}, async tabs => {
         load(false);
         copy();
     } catch (e) {
-        error("Unable to create shortlink.");
+        if(!(url.toLowerCase().startsWith('http://') || url.toLowerCase().startsWith('https://')))
+            error('The current tab doesn\'t have a valid URL to shorten.');
+        else
+            error("Unable to create shortlink.");
         console.log(e);
     }
 });

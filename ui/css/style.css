@@ -4,6 +4,7 @@
 
 #error {
     color: red;
+    min-width: 300px;
 }
 
 body {

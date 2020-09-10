@@ -12,10 +12,10 @@
     "https://twa.si/*"
   ],
   "icons": {
-    "128": "icons/128.png",
-    "64": "icons/64.png",
+    "16": "icons/16.png",
     "32": "icons/32.png",
-    "16": "icons/16.png"
+    "64": "icons/64.png",
+    "128": "icons/128.png"
   },
   "browser_action": {
     "default_title": "Shorten this URL with twa.si",
@@ -24,8 +24,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://twa.si/*"],
-      "js": ["dist/hide-ribbon.js"]
+      "matches": [
+        "https://twa.si/*"
+      ],
+      "js": [
+        "dist/hide-ribbon.js"
+      ]
     }
   ]
 }

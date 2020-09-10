@@ -9,7 +9,7 @@ const argParser = new ArgumentParser(process.argv.slice(2));
 const basePath = join(__dirname, '..');
 const path = join(basePath, 'package');
 
-if(!argParser.get('noVersionIncrement').asBool()) {
+if (!argParser.get('noVersionIncrement').asBool()) {
     const manifest = JSON.parse(readFileSync(join(basePath, 'manifest.json')).toString());
     let version: Array<string> = manifest.version.split('.');
     version[version.length - 1] = (1 + parseInt(version[version.length - 1])).toString();
@@ -29,7 +29,11 @@ mkdirSync(join(path, 'icons'));
 copySync(join(basePath, 'icons'), join(path, 'icons'));
 copyFileSync(join(basePath, 'manifest.json'), join(path, 'manifest.json'));
 
-if (!existsSync(join(basePath, 'dist'))) {
+if(!argParser.get('noBuild').asBool()) {
+    if (existsSync(join(basePath, 'dist'))) {
+        rmdirSync(join(basePath, 'dist'), {recursive: true});
+    }
+
     execSync('npm run build', {stdio: 'inherit'});
 }
 

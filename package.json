@@ -4,7 +4,7 @@
   "description": "Official chrome extension for shortening URLs using twa.si.",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"browserify dist/index.js -o dist/bundle.js\"",
+    "dev": "tsc-watch --onSuccess \"browserify dist/index.js -o dist/bundle.js && npm run package -- --noBuild --noVersionIncrement\"",
     "build": "tsc && browserify dist/index.js -o dist/bundle.js",
     "package": "ts-node scripts/create-package.ts"
   },

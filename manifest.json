@@ -9,7 +9,10 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "https://twa.si/*"
+    "https://twa.si/*",
+    "contextMenus",
+    "clipboardWrite",
+    "notifications"
   ],
   "icons": {
     "16": "icons/16.png",
@@ -31,5 +34,8 @@
         "dist/hide-ribbon.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "page": "ui/html/background.html"
+  }
 }

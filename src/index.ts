@@ -1,4 +1,4 @@
-const GraphQL = require('graphql.js')('https://twa.si/gql', {asJSON: true});
+import {createShortLink} from "./shared";
 
 const loadingRef = document.getElementById('loading') as HTMLDivElement;
 const urlContainerRef = document.getElementById('url-container') as HTMLDivElement;
@@ -29,15 +29,16 @@ chrome.tabs.query({"active": true, "lastFocusedWindow": true}, async tabs => {
     const url = tabs[0].url || '';
     const elem = document.getElementById('url') as HTMLInputElement;
     try {
-        const result = await GraphQL(`mutation { createPublicUrl(url: "${url}") { short, tag }}`)();
-        elem.value = `https://twa.si/${result.createPublicUrl.short}/${result.createPublicUrl.tag}`;
+        elem.value = await createShortLink(url);
         load(false);
         copy();
     } catch (e) {
-        if(!(url.toLowerCase().startsWith('http://') || url.toLowerCase().startsWith('https://')))
+        if (!(url.toLowerCase().startsWith('http://') || url.toLowerCase().startsWith('https://')))
             error('The current tab doesn\'t have a valid URL to shorten.');
         else
             error("Unable to create shortlink.");
         console.log(e);
     }
 });
+
+

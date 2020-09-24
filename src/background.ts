@@ -32,9 +32,9 @@ chrome.contextMenus.create({
             // Notify user about error
             chrome.notifications.create({
                 type: "basic",
-                message: `An error occurred :c`,
+                message: Array.isArray(e) ? e[0].message : `An error occurred :c`,
                 iconUrl: "../../icons/128.png",
-                title: "Could not copy..."
+                title: "Could not create shortlink"
             });
         }
     }
